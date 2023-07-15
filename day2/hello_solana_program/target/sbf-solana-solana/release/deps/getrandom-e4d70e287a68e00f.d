@@ -1,0 +1,10 @@
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/getrandom-e4d70e287a68e00f.rmeta: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/custom.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/libgetrandom-e4d70e287a68e00f.rlib: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/custom.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/getrandom-e4d70e287a68e00f.d: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/custom.rs
+
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/lib.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/error.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/util.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.10/src/custom.rs:

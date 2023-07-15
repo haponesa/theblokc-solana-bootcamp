@@ -1,0 +1,10 @@
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/debug/deps/memoffset-1912ed838b751292.rmeta: /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/debug/deps/libmemoffset-1912ed838b751292.rlib: /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/debug/deps/memoffset-1912ed838b751292.d: /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs /Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs
+
+/Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/lib.rs:
+/Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/raw_field.rs:
+/Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/offset_of.rs:
+/Users/lovenakagawa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.9.0/src/span_of.rs:

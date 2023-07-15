@@ -1,0 +1,1 @@
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/debug/libhello_solana_program.dylib: /Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/src/lib.rs

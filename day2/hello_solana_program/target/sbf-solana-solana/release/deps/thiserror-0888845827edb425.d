@@ -1,0 +1,10 @@
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/thiserror-0888845827edb425.rmeta: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/aserror.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/display.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/provide.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/libthiserror-0888845827edb425.rlib: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/aserror.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/display.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/provide.rs
+
+/Users/lovenakagawa/Desktop/theblokc-solana-bootcamp/day2/hello_solana_program/target/sbf-solana-solana/release/deps/thiserror-0888845827edb425.d: /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/lib.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/aserror.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/display.rs /Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/provide.rs
+
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/lib.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/aserror.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/display.rs:
+/Users/lovenakagawa/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-1.0.43/src/provide.rs:
