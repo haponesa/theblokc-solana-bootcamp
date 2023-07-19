@@ -1,3 +1,5 @@
 .env
 node_modules
 day2/hello_solana_program/test-ledger
+# Local Netlify folder
+.netlify
