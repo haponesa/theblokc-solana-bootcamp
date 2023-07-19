@@ -15,12 +15,11 @@ async function main() {
 
     const base58DecodePK = base58.decode(process.env.SOL_PRIVATE_KEY || '')
     const keyPairFromSecret = Web3.Keypair.fromSecretKey(base58DecodePK)
-    console.log(base58DecodePK) //get key.json from phantom wallet secret key
 
     const connection = new Web3.Connection(Web3.clusterApiUrl('testnet'))
 
     const txHash = await sendAndConfirmTransaction(connection, transaction, [keyPairFromSecret])
-    // console.log('txtHash ', txHash)
+    console.log('txtHash ', txHash)
 }
 
 main()
