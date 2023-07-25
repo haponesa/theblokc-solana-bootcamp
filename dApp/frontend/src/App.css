@@ -23,10 +23,10 @@ code {
   align-items: center !important;
 }
 
-.navbar + input {
-  margin: 0 8px 0 24px !important;
-}
-
 .btn-center {
   text-align: center;
+}
+
+.btn-center > input {
+  margin: 0 8px 0 24px !important;
 }

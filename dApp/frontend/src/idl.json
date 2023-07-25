@@ -1,9 +1,9 @@
 {
   "version": "0.1.0",
-  "name": "storeapp",
+  "name": "postapp",
   "instructions": [
     {
-      "name": "initialize",
+      "name": "createPost",
       "accounts": [
         {
           "name": "baseAccount",
@@ -18,17 +18,6 @@
         {
           "name": "systemProgram",
           "isMut": false,
-          "isSigner": false
-        }
-      ],
-      "args": []
-    },
-    {
-      "name": "updateValue",
-      "accounts": [
-        {
-          "name": "baseAccount",
-          "isMut": true,
           "isSigner": false
         }
       ],

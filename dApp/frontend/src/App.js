@@ -17,6 +17,8 @@ import React, { FC, ReactNode, useMemo, useCallback, useState } from 'react';
 require('./App.css');
 require('@solana/wallet-adapter-react-ui/styles.css');
 
+const postArr = [];
+
 
 const App = () => {
     return (
@@ -51,6 +53,7 @@ const Context = ({ children }) => {
 const Content = () => {
     const wallet = useAnchorWallet();
     const bAccount = Keypair.generate();
+    //const postArr = [];
 
     const getProvider = () => {
         if (!wallet) {
@@ -63,9 +66,17 @@ const Content = () => {
         return provider;
     }
 
-    const [hasInitialize, setInit] = useState();
-    const createAccount = async () => {
+    // get value from input
+    const [inputValue, setInputValue] = useState();
+    const onInputChange = (event) => {
+        const { value } = event.target
+        setInputValue(value)
+    }
+
+    const [accountPosts, setAccountPosts ] = useState();
+    const createPost = async () => {
         const provider = getProvider(); //Call important function to get provider
+        const data = inputValue.toString()
 
         if (!provider) {
             throw("Provider NULL")
@@ -74,10 +85,10 @@ const Content = () => {
         const a = JSON.stringify(idl); //Import to parse idl, otherwise error will show
         const b = JSON.parse(a);
         const program = new anchor.Program(b, idl.metadata.address, provider)
-        console.log("PROGRAM: ", program);
+        //console.log("PROGRAM: ", program);
 
         try {
-            await program.rpc.initialize({
+            await program.rpc.createPost(data, {
                 accounts: {
                     baseAccount: bAccount.publicKey,
                     user: provider.wallet.publicKey,
@@ -86,43 +97,13 @@ const Content = () => {
                 signers: [bAccount],
             })
 
-            setInit(1);
             const account = await program.account.init.fetch(bAccount.publicKey);
-            console.log("ACCOUNT: ", account);
+            //console.log("ACCOUNT: ", account);
+            
+            postArr.unshift(account.value.toString());
+            console.log("POSTS ARRAY FROM ACCOUNTS: ", postArr);
 
-        } catch (err) {
-            console.log("ERR: ", err);
-        }
-    }
-
-    const [inputValue, setInputValue] = useState();
-    const onInputChange = (event) => {
-        const { value } = event.target
-        setInputValue(value)
-    }
-
-    
-    const getValue = async () => {
-        const provider = getProvider(); //Call important function to get provider
-
-        if (!provider && !inputValue) {
-            throw("Provider NULL")
-        }
-
-        const a = JSON.stringify(idl); //Import to parse idl, otherwise error will show
-        const b = JSON.parse(a);
-        const program = new anchor.Program(b, idl.metadata.address, provider)
-        console.log("INPUT_VAL: ", inputValue);
-
-        try {
-            await program.rpc.updateValue(inputValue, {
-                accounts: {
-                    baseAccount: bAccount.publicKey,
-                },
-            })
-
-            const account = await program.account.init.fetch(bAccount.publicKey);
-            console.log("ACCOUNT_UPDATEVALUE: ", account.value.toString());
+            setAccountPosts([...postArr]);
 
         } catch (err) {
             console.log("ERR: ", err);
@@ -141,46 +122,39 @@ const Content = () => {
                 </div>
             </div>
 
-            { !hasInitialize ?
-                <div className='btn-center'>
-                    <button className='btn' onClick={createAccount}>Start Posting</button>
-                </div>
-
+            { !wallet ? 
+                <h4 className="btn-center">Please connect your wallet to start posting</h4> 
+                
                 :
-
+                
                 <div className='btn-center'>
                     <input placeholder="Enter text to post" type="text" onChange={onInputChange}></input>
-                    <button className='btn' onClick={getValue}>Post</button>
+                    <button className='btn' onClick={createPost}>Post</button>
                 </div>
-
             }
-
             <hr />
 
             {/* post feed area */}
             <div className="container">
                 <div className="row">
 
-                    <div className="col-sm-1">
-                        <div className="card">
-                            <div className="card-header"><small><strong>lvnkgw</strong></small></div><br />
-                            <div className="card-body">
-                                {/* post content */}
-                                <p className="card-text">Sample text post lorem ipsum dolor amit</p>
+                    {/* Post items */}
+                    {
+                        !postArr.length ? 
+                            <h4 className="btn-center">Create your first post above</h4> 
+                        : 
+                        postArr.map((post, i) => 
+                            <div className="col-sm-1" key={i}>
+                                <div className="card">
+                                    <div className="card-header"><small><strong>lvnkgw</strong></small></div><br />
+                                    <div className="card-body">
+                                        <p className="card-text">{post}</p>
+                                    </div>
+                                </div>
+                                <hr />
                             </div>
-                        </div>
-                        <hr />
-                    </div>
-
-                    <div className="col-sm-1">
-                        <div className="card">
-                            <div className="card-header"><small><strong>lvnkgw</strong></small></div><br />
-                            <div className="card-body">
-                                {/* post content */}
-                                <p className="card-text">Another sample text post lorem ipsum dolor amit</p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    }
 
                 </div>
             </div>
