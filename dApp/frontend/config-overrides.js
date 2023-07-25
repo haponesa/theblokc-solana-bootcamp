@@ -27,6 +27,7 @@ module.exports = function (config, env) {
                 buffer: require.resolve('buffer'),
                 stream: require.resolve('stream-browserify'),
                 https: require.resolve('https-browserify'),
+                http: require.resolve('stream-http'),
             },
         },
         ignoreWarnings: [/Failed to parse source map/],
