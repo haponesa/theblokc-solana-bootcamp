@@ -1,18 +1,16 @@
-import { createAccount } from '@solana/spl-token';
 import '../src/css/bootstrap.css'
 // import fs from "fs";
 import idl from "./idl.json";
 
 import * as anchor from '@project-serum/anchor';
-import { BN} from '@project-serum/anchor';
 
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { ConnectionProvider, WalletProvider, useConnection, useWallet, useAnchorWallet } from '@solana/wallet-adapter-react';
+import { ConnectionProvider, WalletProvider, useAnchorWallet } from '@solana/wallet-adapter-react';
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { PhantomWalletAdapter, SolflareWalletAdapter, SolletWalletAdapter } from '@solana/wallet-adapter-wallets';
 
-import { clusterApiUrl, Transaction, SystemProgram, Keypair, PublicKey, Connection } from '@solana/web3.js';
-import React, { FC, ReactNode, useMemo, useCallback, useState } from 'react';
+import { clusterApiUrl, SystemProgram, Keypair, Connection } from '@solana/web3.js';
+import { useMemo, useState } from 'react';
 
 require('./App.css');
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -73,13 +71,12 @@ const Content = () => {
         setInputValue(value)
     }
 
-    const [accountPosts, setAccountPosts ] = useState();
     const createPost = async () => {
         const provider = getProvider(); //Call important function to get provider
         const data = inputValue.toString()
 
         if (!provider) {
-            throw("Provider NULL")
+            console.log("PROVIDER ERROR")
         }
 
         const a = JSON.stringify(idl); //Import to parse idl, otherwise error will show
@@ -102,8 +99,6 @@ const Content = () => {
             
             postArr.unshift(account.value.toString());
             console.log("POSTS ARRAY FROM ACCOUNTS: ", postArr);
-
-            setAccountPosts([...postArr]);
 
         } catch (err) {
             console.log("ERR: ", err);
