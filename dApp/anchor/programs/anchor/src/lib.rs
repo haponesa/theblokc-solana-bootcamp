@@ -1,41 +1,42 @@
 use anchor_lang::prelude::*;
-use anchor_lang::solana_program::entrypoint::ProgramResult;
 
 declare_id!("6YwfuJiccKjz5VDg1wLp9kSmSRD9TAWF5x2BTbJk69mb");
 
 #[program]
-pub mod postfeedapp {
+pub mod storeapp {
     use super::*;
-    pub fn create_post(ctx: Context<CreatePost>,text:String,media:String,position:i64,admin:bool,) -> ProgramResult {
-        let post = &mut ctx.accounts.feed_post_app;
-        post.admin  = admin;
-        post.media = media;
-        post.position = position;
-        post.text = text;
-        Ok(()) //solana want to know to run the program successfully
+
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        let base_account= &mut ctx.accounts.base_account;
+        base_account.value = String::from("GM, World!");
+        Ok(())
+    }
+
+    pub fn update_value(ctx: Context<UpdateValue>, value: String) -> Result<()> {
+        let base_account= &mut ctx.accounts.base_account;
+        base_account.value = value;
+        Ok(())
     }
 }
 
-//Here "ctx: Context<CreatePost>" is list of accounts create_post needs to retirve the data from the accounts.
 
-#[derive(Accounts)] //It helps to be part of create_post function ctx:context
-pub struct CreatePost<'info,> { 
-    #[account(init,payer=user,space=9000)] 
-    pub feed_post_app : Account<'info,FeedPostApp>, //create a new account and link to your FeedPostApp account
+#[derive(Accounts)]
+pub struct Initialize<'info> { 
+    #[account(init, payer=user, space=9000)] 
+    pub base_account : Account<'info, Init>,
     #[account(mut)]
-    pub user:Signer<'info,>, //signer must sign the transaction to create the account
+    pub user: Signer<'info,>, //signer must sign the transaction to create the account
     pub system_program: Program<'info, System> 
 }
 
-//Here "init" macro is to create new FeedPostApp account
-//Payer is for when creating the new FeedPostApp account will cost us money in blockchain which will paid by the user
-//Space is for amount of space to be allocated in solana blockchain to allocation to this account i.e space can specific for basic - 264
-//Here system program is used specify the system specification to run the porgram into blockchain
+#[derive(Accounts)]
+pub struct UpdateValue<'info> { 
+    #[account(mut)]
+    pub base_account : Account<'info, Init>
+}
 
 #[account] 
-pub struct FeedPostApp{ //The place where will describe the data structure
-    pub text:String,
-    pub media:String,
-    pub position:i64, //number
-    pub admin:bool
+pub struct Init{ //The place where will describe the data structure
+    pub value: String
+    //pub position:u64 //number
 }
