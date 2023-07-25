@@ -3,6 +3,7 @@ import '../src/css/bootstrap.css'
 import idl from "./idl.json";
 
 import * as anchor from '@project-serum/anchor';
+import * as buffer from "buffer";
 
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider, useAnchorWallet } from '@solana/wallet-adapter-react';
@@ -51,7 +52,7 @@ const Context = ({ children }) => {
 const Content = () => {
     const wallet = useAnchorWallet();
     const bAccount = Keypair.generate();
-    //const postArr = [];
+    window.Buffer = buffer.Buffer;
 
     const getProvider = () => {
         if (!wallet) {
