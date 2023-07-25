@@ -75,6 +75,8 @@ const Content = () => {
         const provider = getProvider(); //Call important function to get provider
         const data = inputValue.toString()
 
+        console.log('DATA: ', data);
+
         if (!provider) {
             console.log("PROVIDER ERROR")
         }
@@ -95,7 +97,7 @@ const Content = () => {
             })
 
             const account = await program.account.init.fetch(bAccount.publicKey);
-            //console.log("ACCOUNT: ", account);
+            console.log("ACCOUNT: ", account);
             
             postArr.unshift(account.value.toString());
             console.log("POSTS ARRAY FROM ACCOUNTS: ", postArr);
