@@ -76,8 +76,6 @@ const Content = () => {
         const provider = getProvider(); //Call important function to get provider
         const data = inputValue.toString()
 
-        console.log('DATA: ', data);
-
         if (!provider) {
             console.log("PROVIDER ERROR")
         }
@@ -85,7 +83,7 @@ const Content = () => {
         const a = JSON.stringify(idl); //Import to parse idl, otherwise error will show
         const b = JSON.parse(a);
         const program = new anchor.Program(b, idl.metadata.address, provider)
-        //console.log("PROGRAM: ", program);
+        console.log("PROGRAM: ", program);
 
         try {
             await program.rpc.createPost(data, {
