@@ -104,8 +104,7 @@ const Content = () => {
             console.log("ERR: ", err);
         }
     }
-
-    
+ 
     return (
         <div className="App">
             <div className="navbar">
