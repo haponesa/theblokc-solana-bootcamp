@@ -29,6 +29,7 @@ module.exports = function (config, env) {
                 https: require.resolve('https-browserify'),
                 http: require.resolve('stream-http'),
                 zlib: require.resolve('browserify-zlib'),
+                url: require.resolve('url/'), 
             },
         },
         ignoreWarnings: [/Failed to parse source map/],
